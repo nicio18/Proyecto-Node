@@ -4,9 +4,11 @@ const path = require("path");
 
 //Setting
 app.set("port",4000);
+//
 app.set("views", path.join(__dirname, "views"));
+//Comando para utilizar archivos ejs con extension html
+app.engine("html", require("ejs").renderFile);
 app.set("view engine","ejs"); 
-
 
 //routes
 
