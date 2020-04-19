@@ -5,19 +5,15 @@ const router =express.Router();
 
 //Creamos otra ruta --- Contact
  router.get("/", (req, res) =>{
-    res.render("index.html", {title: "hello word"} );
+    res.render("index", {title: "hello world"} );
  });
  
  router.get("/contact", (req, res) =>{
-    res.render("contact.html",{title:"contact page"});
+    res.render("contact.ejs",{title:"contact page"});
  });
 
  router.get("/about", (req, res) =>{
-   res.render("about.html",{title:"about page"});
+   res.render("about.ejs",{title:"about page"});
 });
-
-  
- 
-
 
  module.exports = router;
